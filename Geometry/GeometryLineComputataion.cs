@@ -12,8 +12,20 @@
             int y2 = Convert.ToInt32(Console.ReadLine());
 
             double d1 = Math.Sqrt((x2 - x1) * (x2 - x1) + (y2 - y1) * (y2 - y1));
-            Console.WriteLine($"First co-ordinates is {x1},{y1} & Second Co-ordinates is {x2},{y2}");
+            Console.WriteLine($"Provided co-ordinates (x1,y1):({x1},{y1})  &  (x2,y2):({x2},{y2})");
             return d1;
+        }
+        public static void EqualsMethod(double line1Distance, double line2Distance)
+        {
+            bool EqualsStatus = line1Distance.Equals(line2Distance);
+            if (EqualsStatus)
+            {
+                Console.WriteLine("Length value of both Line 1 and Line 2 are EQUAL");
+            }
+            else
+            {
+                Console.WriteLine("Length value of Line 1 and Line 2 are NOT equal");
+            }
         }
         static void Main(string[] args)
         {
@@ -26,6 +38,9 @@
             Console.WriteLine($"Found Line 2 length value : {line2Distance}");
             Console.WriteLine();
             Console.WriteLine($"So finally got Line 1 length value : {line1Distance} & Line 2 length value : {line2Distance}");
+
+            Console.Write("Using Equals Method output is :::: ");
+            GeometryLineComputataion.EqualsMethod(line1Distance, line2Distance); //Equals()
         }
     }
 }
