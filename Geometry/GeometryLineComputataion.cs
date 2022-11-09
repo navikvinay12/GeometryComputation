@@ -27,6 +27,22 @@
                 Console.WriteLine("Length value of Line 1 and Line 2 are NOT equal");
             }
         }
+        public static void CompareMethod(double line1Distance, double line2Distance)
+        {
+            int CompareToStatus = line1Distance.CompareTo(line2Distance);
+            if (CompareToStatus == 0)
+            {
+                Console.WriteLine("Both first and second lines are having Equal Length.");
+            }
+            else if (CompareToStatus < 0)
+            {
+                Console.WriteLine("Length of first line is less than second line.");
+            }
+            else
+            {
+                Console.WriteLine("Length of first line is greater than second line.");
+            }
+        }
         static void Main(string[] args)
         {
             Console.WriteLine("Welcome to Line Comparison Computation Program");
@@ -40,7 +56,10 @@
             Console.WriteLine($"So finally got Line 1 length value : {line1Distance} & Line 2 length value : {line2Distance}");
 
             Console.Write("Using Equals Method output is :::: ");
-            GeometryLineComputataion.EqualsMethod(line1Distance, line2Distance); //Equals()
+            GeometryLineComputataion.EqualsMethod(line1Distance, line2Distance);
+
+            Console.Write("Using Compare To Method output is ::::");
+            GeometryLineComputataion.CompareMethod(line1Distance, line2Distance);
         }
     }
 }
