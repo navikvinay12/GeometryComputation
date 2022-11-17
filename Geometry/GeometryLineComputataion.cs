@@ -11,7 +11,7 @@
             int x2 = Convert.ToInt32(Console.ReadLine());
             int y2 = Convert.ToInt32(Console.ReadLine());
 
-            double d1 = Math.Sqrt((x2 - x1) * (x2 - x1) + (y2 - y1) * (y2 - y1));
+            double d1 = Math.Sqrt(Math.Pow(x2 - x1, 2) + Math.Pow(y2 - y1, 2));    //with using Pow function.
             Console.WriteLine($"Provided co-ordinates (x1,y1):({x1},{y1})  &  (x2,y2):({x2},{y2})");
             return d1;
         }
